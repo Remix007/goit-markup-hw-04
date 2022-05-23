@@ -61,7 +61,7 @@ ul {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
@@ -149,7 +149,13 @@ ul {
 /* hero */
 
 .hero {
-    background-color: var(--second-theme-color);
+    background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url("../images/svg/hero/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
+    margin: 0 auto;
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
 }
