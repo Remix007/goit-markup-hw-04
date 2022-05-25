@@ -58,6 +58,7 @@ ul {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .container {
@@ -75,7 +76,32 @@ ul {
 .header-content {
     display: flex;
     align-items: center;
+
 }
+
+.contacts-list {
+    margin-left: 280px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.contacts-list-item .contacts-link {
+    padding: 32px 0;
+}
+.contacts-list-item:hover .icon-contacts,
+.contacts-list-item:focus .icon-contacts{
+color: var(--accent-color)  ;
+}
+
+.contacts-link {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: #757575;
+}
+
 
 .hide {
     position: absolute;
@@ -97,8 +123,25 @@ ul {
     margin-left: auto;
 }
 
-.nav-item + .nav-item {
+.nav-item+.nav-item {
     margin-left: 50px;
+}
+
+.contacts-list-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.icon-contacts {
+    margin-right: 10px;
+    color: #AFB1B8;
+}
+
+.contact {
+    color: var(--second-text-color);
+}
+
+.icon {
+    fill: currentColor;
 }
 
 .logo {
@@ -121,8 +164,7 @@ ul {
     color: var(--main-color);
 }
 
-.nav-link,
-.contact {
+.nav-link {
     padding: 32px 0;
     display: block;
     font-weight: 500;
@@ -131,29 +173,24 @@ ul {
     color: var(--text-color);
 }
 
-.contact {
-    color: var(--second-text-color);
-
-
-}
 
 .nav-link:hover,
 .nav-link:focus,
-.contact:focus,
-.contact:hover,
+.contacts-link:focus,
+.contacts-link:hover,
 .current {
-    color: var(--accent-color);
+    color: var(--accent-color);                     
 }
 
 
 /* hero */
 
 .hero {
-    background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url("../images/svg/hero/hero.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url("../images/svg/hero/hero.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size:contain;
+    background-size: contain;
     margin: 0 auto;
     max-width: 1600px;
     padding-top: 200px;
@@ -194,12 +231,15 @@ ul {
     letter-spacing: 0.06em;
     cursor: pointer;
     color: var(--main-color);
+
 }
 
 
 .general-button:focus,
 .general-button:hover {
-    background-color: var(--color-button)
+    background-color: var(--color-button);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .buttons-list {
@@ -213,6 +253,8 @@ ul {
 .project-button.active {
     background-color: var(--accent-color);
     color: var(--main-color);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-button {
@@ -228,7 +270,7 @@ ul {
     padding: 6px 22px;
 }
 
-.buttons-item + .buttons-item {
+.buttons-item+.buttons-item {
     margin-left: 8px;
 }
 
@@ -280,6 +322,7 @@ img {
 
 
 /* features */
+
 .features {
     display: flex;
 }
@@ -308,6 +351,17 @@ img {
     color: var(--second-text-color);
 }
 
+.features-icon {
+    max-width: 270px;
+    background-color: #f5f4fa;
+    margin-bottom: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+
 /* works */
 
 .work-section {
@@ -322,13 +376,26 @@ img {
     margin-bottom: 50px;
 }
 
-.works-item + .works-item {
+.works-item+.works-item {
     margin-left: 30px;
 }
+
+.works-list-item {
+    display: block;
+}
+
+.works-list-item:hover,
+.works-list-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 
 /* team */
 .team {
     background-color: var(--theme-color);
+
+
 }
 
 .team-list {
@@ -346,9 +413,12 @@ img {
     background-color: var(--main-color);
     font-size: 16px;
     line-height: 1.19;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
-.team-plate + .team-plate {
+.team-plate+.team-plate {
     margin-left: 30px;
 }
 
@@ -364,14 +434,91 @@ img {
     color: var(--second-text-color);
     text-align: center;
 }
+
 .plate {
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-left: auto;
-    padding-right: auto;
+}
+
+/* Social */
+
+.socials {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #AFB1B8;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--accent-color);
+    color: var(--main-color);
+
+}
+
+.social-icon {
+    fill: currentColor;
+}
+
+
+/* customers section */
+
+
+.customers-list {
+    display: flex;
+}
+
+.customers-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    color: #AFB1B8;
+}
+
+.customers-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;    
+    height: auto;
+    color: #afb1b8;
+}
+
+
+
+.customers-link:hover .customers-item,
+.customers-link:focus .customers-item {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.customers-item:not(:last-child) {
+    margin-right: 30px;
 }
 
 /* footer */
+
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
 
 .footer {
     background-color: var(--second-theme-color);
@@ -403,6 +550,48 @@ img {
     font-style: normal;
 }
 
-.address-item + .address-item {
+.address-item+.address-item {
     margin-top: 9px;
 }
+
+/* footer social */
+
+.footer-join-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.join-list {
+    display: flex;
+    width: 206px;
+}
+
+.join-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.footer .join-link {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.join-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.join-link:hover,
+.join-link:focus {
+    background-color: var(--accent-color);
+}
+
+.footer-detail {
+    margin-right: 70px;
+}
+
