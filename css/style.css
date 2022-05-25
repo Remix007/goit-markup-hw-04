@@ -62,11 +62,9 @@ ul {
 }
 
 .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 0 15px;
 }
 
 .header {
@@ -90,9 +88,10 @@ ul {
 .contacts-list-item .contacts-link {
     padding: 32px 0;
 }
+
 .contacts-list-item:hover .icon-contacts,
-.contacts-list-item:focus .icon-contacts{
-color: var(--accent-color)  ;
+.contacts-list-item:focus .icon-contacts {
+    color: var(--accent-color);
 }
 
 .contacts-link {
@@ -120,11 +119,14 @@ color: var(--accent-color)  ;
 
 .nav-pannel {
     display: flex;
-    margin-left: auto;
 }
 
-.nav-item+.nav-item {
-    margin-left: 50px;
+.nav-item:last-child {
+    margin-right: 0px;
+}
+
+.nav-item {
+    margin-right: 50px;
 }
 
 .contacts-list-item:not(:last-child) {
@@ -179,7 +181,7 @@ color: var(--accent-color)  ;
 .contacts-link:focus,
 .contacts-link:hover,
 .current {
-    color: var(--accent-color);                     
+    color: var(--accent-color);
 }
 
 
@@ -190,7 +192,6 @@ color: var(--accent-color)  ;
         url("../images/svg/hero/hero.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
     margin: 0 auto;
     max-width: 1600px;
     padding-top: 200px;
@@ -323,44 +324,44 @@ img {
 
 /* features */
 
-.features {
+.features-list {
     display: flex;
+}
+
+.features-item {
+    margin-right: 30px;
+}
+
+.features-item:last-child {
+    margin-right: 0;
 }
 
 .features-item {
     width: 270px;
 }
 
-.features-item+.features-item {
-    margin-left: 30px;
-}
-
 .features-title {
     margin-bottom: 10px;
-    font-weight: 700;
-    line-height: 1.14;
-    text-transform: uppercase;
     font-size: 14px;
+    line-height: 1.142;
+    text-transform: uppercase;
+    color: var(--text-color)
 }
 
-.features-text {
-    font-weight: 400;
-    line-height: 1.71;
-    text-align: left;
-    vertical-align: top;
-    color: var(--second-text-color);
+.features-contur {
+    line-height: 1.714;
+    color: #757575;
 }
 
-.features-icon {
-    max-width: 270px;
-    background-color: #f5f4fa;
-    margin-bottom: 30px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+.features .icon-list {
     display: flex;
+    align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    height: 120px;
+    background-color: #f5f4fa;
 }
-
 
 /* works */
 
@@ -476,41 +477,30 @@ img {
 
 /* customers section */
 
-
-.customers-list {
+.customer-link {
     display: flex;
-}
-
-.customers-item {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 92px;
+    justify-content: center;
     border: 1px solid #afb1b8;
     border-radius: 4px;
-    color: #AFB1B8;
-}
-
-.customers-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;    
-    height: auto;
+    width: 170px;
+    height: 92px;
     color: #afb1b8;
 }
 
-
-
-.customers-link:hover .customers-item,
-.customers-link:focus .customers-item {
-    border-color: var(--accent-color);
+.customer-link:hover,
+.customer-link:focus {
+    border: 1px solid var(--accent-color);
     color: var(--accent-color);
 }
 
-.customers-item:not(:last-child) {
-    margin-right: 30px;
+.customer .icon-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.customer .icon {
+    fill: currentColor;
 }
 
 /* footer */
@@ -594,4 +584,3 @@ img {
 .footer-detail {
     margin-right: 70px;
 }
-
