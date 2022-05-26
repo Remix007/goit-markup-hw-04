@@ -16,12 +16,17 @@ color button #188CE8
     --color-button: #188CE8;
 }
 
+html {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
     background-color: var(--main-color);
     font-size: 14px;
     letter-spacing: 0.03em;
+    font-weight: 400;
 }
 
 h1,
@@ -54,7 +59,6 @@ ul {
 }
 
 .section-title {
-    font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
@@ -133,6 +137,13 @@ ul {
     margin-right: 50px;
 }
 
+.contacts-link:hover .icon-contacts,
+.contacts-link:focus .icon-contacts{
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+color: var(--accent-color);
+}
+
+
 .icon-contacts {
     margin-right: 10px;
     color: #AFB1B8;
@@ -167,12 +178,15 @@ ul {
 }
 
 .nav-link {
-    padding: 32px 0;
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     display: block;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--text-color);
+
 }
 
 
